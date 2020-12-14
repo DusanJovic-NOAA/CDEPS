@@ -17,8 +17,8 @@ add_library(docn ${SRCFILES})
 
 
 target_include_directories (docn PUBLIC ${ESMF_F90COMPILEPATHS})
-target_include_directories (docn PUBLIC "${CMAKE_BINARY_DIR}/dshr")
+target_include_directories (docn PUBLIC "${CMAKE_CURRENT_BINARY_DIR}/../dshr")
 target_include_directories (docn PUBLIC "${CMAKE_SOURCE_DIR}")
-target_include_directories (docn PUBLIC "${CMAKE_BINARY_DIR}/share")
-target_include_directories (docn PUBLIC "${CMAKE_BINARY_DIR}/streams")
+target_include_directories (docn PUBLIC "${CMAKE_CURRENT_BINARY_DIR}/../share")
+target_include_directories (docn PUBLIC "${CMAKE_CURRENT_BINARY_DIR}/../streams")
 target_include_directories (docn PUBLIC "${PIO_Fortran_INCLUDE_DIR}")

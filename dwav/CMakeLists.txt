@@ -10,10 +10,9 @@ endforeach()
 
 add_library(dwav ${SRCFILES})
 
-
 target_include_directories (dwav PUBLIC ${ESMF_F90COMPILEPATHS})
-target_include_directories (dwav PUBLIC "${CMAKE_BINARY_DIR}/dshr")
+target_include_directories (dwav PUBLIC "${CMAKE_CURRENT_BINARY_DIR}/../dshr")
 target_include_directories (dwav PUBLIC "${CMAKE_SOURCE_DIR}")
-target_include_directories (dwav PUBLIC "${CMAKE_BINARY_DIR}/share")
-target_include_directories (dwav PUBLIC "${CMAKE_BINARY_DIR}/streams")
+target_include_directories (dwav PUBLIC "${CMAKE_CURRENT_BINARY_DIR}/../share")
+target_include_directories (dwav PUBLIC "${CMAKE_CURRENT_BINARY_DIR}/../streams")
 target_include_directories (dwav PUBLIC "${PIO_Fortran_INCLUDE_DIR}")
