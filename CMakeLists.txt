@@ -51,6 +51,7 @@ add_subdirectory(dshr)
 
 foreach(COMP datm dice dlnd docn drof dwav)
   add_subdirectory("${COMP}")
+  add_dependencies(${COMP} dshr)
 endforeach(COMP)
 
 install(TARGETS streams dshr
